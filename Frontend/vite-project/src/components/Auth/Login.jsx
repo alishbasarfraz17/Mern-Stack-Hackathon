@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import AuthContext from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
 const Login = () => {
   const { login } = useContext(AuthContext);
@@ -19,24 +20,42 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-container">
+    <div className="login-box">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Login</button>
+        <div className="input-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="input-group">
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+
+        <button type="submit" className="login-btn">
+          Login
+        </button>
+
+        <p className="signup-link">
+          Don't have an account? <a href="/Register">Sign up</a>
+        </p>
       </form>
     </div>
+  </div>
   );
 };
 

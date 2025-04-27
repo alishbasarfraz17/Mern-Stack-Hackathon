@@ -25,5 +25,4 @@ function App() {
   );
 }
 
-export default App;
-export const AuthContext = createContext(); 
+export default App; 
