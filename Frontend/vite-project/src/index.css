@@ -1,0 +1,19 @@
+.task-board {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-column {
+  width: 30%;
+  padding: 10px;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+
+.task-card {
+  background: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
